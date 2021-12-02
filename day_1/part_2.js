@@ -1,0 +1,1 @@
+console.log(require('fs').readFileSync("./input.txt").toString().split("\n").map(_=>parseInt(_)).map((e, i, a) => e+a[i+1]+a[i+2]).filter(i=>!isNaN(i)).reduce((acc,c,i,a)=>(i>0&&c>a[i-1])?acc+1:acc,0))
